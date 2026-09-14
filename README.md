@@ -128,28 +128,11 @@ The model uses the order-level dimension to support filtering across datasets of
 - **Long approval delays**: flagged (`approval_delay_anomaly = TRUE`) rather than deleted, preserving data for investigation.
 - **Missing product attributes**: retained rather than removed from the warehouse.
 
-## Repository Structure
-
-ecommerce-data-warehouse/
-├── data/raw/ # Source CSV files (gitignored)
-├── src/profiling/profile_data.py # Python profiling script
-├── sql/
-│ ├── 01_create_schemas.sql
-│ ├── 02_create_raw_tables.sql
-│ ├── 03_staging_transformations.sql
-│ ├── 04_warehouse_schema.sql
-│ └── 05_analytical_queries.sql
-├── powerbi/ecommerce_sales_dashboard.pbix
-├── docs/
-├── .gitignore
-└── README.md
-
-
 ## Reproducing the Project
 
 1. **Clone the repo**
 ```bash
-   git clone <repository-url>
+   git clone https://github.com/Lahari1005/ecommerce-data-warehouse.git
    cd ecommerce-data-warehouse
 ```
 2. **Download the dataset** — get the Olist dataset and extract CSVs into `data/raw/`
